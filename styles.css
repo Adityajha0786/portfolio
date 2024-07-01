@@ -1,0 +1,210 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    position: relative; /* Ensure positioning context for pseudo element */
+}
+
+h2::before {
+    content: "Welcome to ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0; /* Initially hidden */
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+h2:hover::before {
+    transform: translate(-50%, -50%) rotateY(20deg); /* Apply 3D rotation */
+    opacity: 1; /* Show on hover */
+}
+
+.portfolio-item {
+    margin-bottom: 40px;
+    perspective: 1000px;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    transition: transform 0.5s;
+}
+
+.portfolio-item:hover img {
+    transform: rotateY(20deg);
+}
+
+.contact-info {
+    perspective: 1000px;
+}
+
+.contact-info div {
+    margin-bottom: 20px;
+}
+
+.contact-info div img {
+    max-width: 100%;
+    transition: transform 0.5s;
+}
+
+.contact-info div:hover img {
+    transform: rotateY(20deg);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .portfolio-item img, .contact-info div img {
+        transform: none;
+    }
+}
+
+/* Portfolio Section */
+.portfolio-item {
+    margin-bottom: 40px;
+    perspective: 1000px;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+
+.portfolio-item:hover img {
+    transform: rotateY(20deg);
+}
+
+/* Contact Section */
+.contact-info {
+    perspective: 1000px;
+}
+
+.contact-info div {
+    margin-bottom: 20px;
+}
+
+.contact-info div img {
+    max-width: 100%;
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+
+.contact-info div:hover img {
+    transform: rotateY(20deg);
+}
+/* Basic styling for the contact section */
+.contact-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Form styling */
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-input, .form-textarea {
+    width: calc(100% - 22px); /* Adjust for padding */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-textarea {
+    height: 120px; /* Adjust textarea height */
+}
+
+.submit-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
